@@ -210,7 +210,8 @@ f1 = make_scorer('f1',
 roc_auc = make_scorer('roc_auc',
                       sklearn.metrics.roc_auc_score,
                       greater_is_better=True,
-                      needs_threshold=True)
+                      needs_threshold=True,
+                      needs_proba=True)
 average_precision = make_scorer('average_precision',
                                 sklearn.metrics.average_precision_score,
                                 needs_threshold=True)
